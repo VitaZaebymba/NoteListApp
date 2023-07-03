@@ -9,13 +9,9 @@ import java.io.ByteArrayOutputStream
 import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ShoppingListNamesTest {
 
+    /**  Тест проверяет корректность создания объекта ShoppingListNames и соответствие значений его полей */
     @Test
     fun testShoppingListNamesObject() {
         val shoppingList = ShoppingListNames(
@@ -35,6 +31,7 @@ class ShoppingListNamesTest {
         assertEquals("1,2,3", shoppingList.itemsIds)
     }
 
+    /**  Тест выполняет проверку сериализации и десериализации объекта ShoppingListNames */
     @Test
     fun testShoppingListNamesSerialization() {
         val originalShoppingList = ShoppingListNames(
