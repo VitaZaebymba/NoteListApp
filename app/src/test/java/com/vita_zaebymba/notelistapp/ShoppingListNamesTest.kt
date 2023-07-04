@@ -23,12 +23,19 @@ class ShoppingListNamesTest {
             itemsIds = "1,2,3"
         )
 
-        assertEquals(1, shoppingList.id)
-        assertEquals("Grocery List", shoppingList.name)
-        assertEquals("2023-07-03", shoppingList.time)
-        assertEquals(5, shoppingList.allItemCounter)
-        assertEquals(2, shoppingList.checkedItemsCounter)
-        assertEquals("1,2,3", shoppingList.itemsIds)
+        val id = 1
+        val name = "Grocery List"
+        val time = "2023-07-03"
+        val allItemCounter = 5
+        val checkedItemsCounter = 2
+        val itemsIds = "1,2,3"
+
+        assertEquals(id, shoppingList.id)
+        assertEquals(name, shoppingList.name)
+        assertEquals(time, shoppingList.time)
+        assertEquals(allItemCounter, shoppingList.allItemCounter)
+        assertEquals(checkedItemsCounter, shoppingList.checkedItemsCounter)
+        assertEquals(itemsIds, shoppingList.itemsIds)
     }
 
     /**  Тест выполняет проверку сериализации и десериализации объекта ShoppingListNames */

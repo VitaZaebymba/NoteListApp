@@ -18,12 +18,19 @@ class ShoppingListItemTest {
             itemType = "item"
         )
 
-        assertEquals(1, shoppingListItem.id)
-        assertEquals("milk", shoppingListItem.name)
-        assertEquals("1 l", shoppingListItem.itemInfo)
-        assertEquals(1, shoppingListItem.itemChecked)
-        assertEquals(3, shoppingListItem.listId)
-        assertEquals("item", shoppingListItem.itemType)
+        val id = 1
+        val name = "milk"
+        val itemInfo = "1 l"
+        val itemChecked = 1
+        val listId = 3
+        val itemType = "item"
+
+        assertEquals(id, shoppingListItem.id)
+        assertEquals(name, shoppingListItem.name)
+        assertEquals(itemInfo, shoppingListItem.itemInfo)
+        assertEquals(itemChecked, shoppingListItem.itemChecked)
+        assertEquals(listId, shoppingListItem.listId)
+        assertEquals(itemType, shoppingListItem.itemType)
     }
 
 }

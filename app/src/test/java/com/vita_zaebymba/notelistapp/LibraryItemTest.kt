@@ -12,7 +12,10 @@ class LibraryItemTest {
             name = "beef"
                 )
 
-        assertEquals(1, libraryItem.id)
-        assertEquals("beef", libraryItem.name)
+        val id = 1
+        val name = "beef"
+
+        assertEquals(id, libraryItem.id)
+        assertEquals(name, libraryItem.name)
     }
 }

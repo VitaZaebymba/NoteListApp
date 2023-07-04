@@ -16,10 +16,16 @@ class NoteItemTest {
             category = "Home"
                 )
 
-        assertEquals(1, noteItem.id)
-        assertEquals("Fruits", noteItem.title)
-        assertEquals("apples, oranges", noteItem.content)
-        assertEquals("2023-07-04", noteItem.time)
-        assertEquals("Home", noteItem.category)
+        val id = 1
+        val title = "Fruits"
+        val content = "apples, oranges"
+        val time = "2023-07-04"
+        val category = "Home"
+
+        assertEquals(id, noteItem.id)
+        assertEquals(title, noteItem.title)
+        assertEquals(content, noteItem.content)
+        assertEquals(time, noteItem.time)
+        assertEquals(category, noteItem.category)
     }
 }
