@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
-@Entity (tableName = "NoteList")
+@Entity (tableName = "note_list")
 data class NoteItem(
     @PrimaryKey (autoGenerate = true)
     val id: Int?,

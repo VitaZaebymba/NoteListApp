@@ -15,6 +15,7 @@ import com.vita_zaebymba.notelistapp.entities.ShoppingListNames
                       ShoppingListNames::class
 ], version = 1)
 abstract class MainDatabase: RoomDatabase() {
+    abstract fun getDao(): Dao
 
     companion object {
         @Volatile
@@ -25,7 +26,7 @@ abstract class MainDatabase: RoomDatabase() {
                     context.applicationContext,
                     MainDatabase::class.java,
                     "note_list.db"
-                ).build()
+                ).build() // создание базы данных
                 instance
             }
         }
