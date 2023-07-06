@@ -9,9 +9,13 @@ import android.view.ViewGroup
 import com.vita_zaebymba.notelistapp.R
 import com.vita_zaebymba.notelistapp.databinding.FragmentNoteBinding
 
-class NoteFragment: Fragment() {
+class NoteFragment: BaseFragment() {
 
     private lateinit var binding: FragmentNoteBinding
+
+    override fun onClickNew() {
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

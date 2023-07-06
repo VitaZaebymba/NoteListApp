@@ -6,6 +6,9 @@ import android.util.Log
 import android.widget.Toast
 import com.vita_zaebymba.notelistapp.R
 import com.vita_zaebymba.notelistapp.databinding.ActivityMainBinding
+import com.vita_zaebymba.notelistapp.databinding.FragmentNoteBinding
+import com.vita_zaebymba.notelistapp.fragments.FragmentManager
+import com.vita_zaebymba.notelistapp.fragments.NoteFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Settings clicked!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.notes -> {
-                    Toast.makeText(applicationContext, "Notes clicked!", Toast.LENGTH_SHORT).show()
+                    FragmentManager.setFragment(NoteFragment.newInstance(), this)
                 }
                 R.id.shop_list -> {
                     Toast.makeText(applicationContext, "List clicked!", Toast.LENGTH_SHORT).show()
