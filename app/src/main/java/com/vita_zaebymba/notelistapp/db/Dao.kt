@@ -8,10 +8,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface Dao {
-    @Query ("SELECT * FROM note_list")
+    @Query("SELECT * FROM note_list")
     fun getAllNotes(): Flow<List<NoteItem>> // Flow подлкючает бд к списку и автоматически обновляет
 
     @Insert
-    suspend fun insertNote(note: NoteItem)
+    fun insertNote(note: NoteItem)
 
 }
