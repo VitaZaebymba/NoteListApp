@@ -14,6 +14,7 @@ class NewNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        actionBarSettings()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -28,6 +29,11 @@ class NewNoteActivity : AppCompatActivity() {
             finish()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun actionBarSettings() {
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
 }
