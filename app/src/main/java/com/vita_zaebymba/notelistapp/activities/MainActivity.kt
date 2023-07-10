@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "List clicked!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.new_item -> {
-                    Toast.makeText(applicationContext, "New item clicked!", Toast.LENGTH_SHORT).show()
+                    FragmentManager.currentFragment?.onClickNew()
                 }
             }
             true

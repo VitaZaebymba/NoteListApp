@@ -1,5 +1,6 @@
 package com.vita_zaebymba.notelistapp.fragments
 
+import android.content.Intent
 import android.os.Binder
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.vita_zaebymba.notelistapp.R
 import com.vita_zaebymba.notelistapp.activities.MainApp
+import com.vita_zaebymba.notelistapp.activities.NewNoteActivity
 import com.vita_zaebymba.notelistapp.databinding.FragmentNoteBinding
 import com.vita_zaebymba.notelistapp.db.MainViewModel
 
@@ -20,14 +22,12 @@ class NoteFragment: BaseFragment() {
     }
 
     override fun onClickNew() {
-
+        startActivity(Intent(activity, NewNoteActivity::class.java))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainViewModel.allNotes.observe(this, {
-            it
-        })
+
     }
 
     override fun onCreateView(
