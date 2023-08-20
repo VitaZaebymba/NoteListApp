@@ -3,6 +3,7 @@ package com.vita_zaebymba.notelistapp.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 import java.util.*
 
 @Entity (tableName = "note_list")
@@ -22,4 +23,4 @@ data class NoteItem(
     @ColumnInfo (name = "category")
     val category: String,
 
-)
+): Serializable
