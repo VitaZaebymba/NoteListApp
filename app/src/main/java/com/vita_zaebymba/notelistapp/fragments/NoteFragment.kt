@@ -48,6 +48,7 @@ class NoteFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRcView()
+        observer()
     }
 
     private fun initRcView() = with(binding){
@@ -72,7 +73,6 @@ class NoteFragment: BaseFragment() {
 
     companion object {
         const val NEW_NOTE_KEY = "new_note_key"
-
         @JvmStatic
         fun newInstance() = NoteFragment()
     }

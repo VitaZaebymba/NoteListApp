@@ -1,5 +1,6 @@
 package com.vita_zaebymba.notelistapp.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +8,10 @@ import android.view.Menu
 import android.view.MenuItem
 import com.vita_zaebymba.notelistapp.R
 import com.vita_zaebymba.notelistapp.databinding.ActivityNewNoteBinding
+import com.vita_zaebymba.notelistapp.entities.NoteItem
 import com.vita_zaebymba.notelistapp.fragments.NoteFragment
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NewNoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewNoteBinding
@@ -35,10 +39,26 @@ class NewNoteActivity : AppCompatActivity() {
 
     private fun setMainResult(){
         val i = Intent().apply {
-            putExtra(NoteFragment.NEW_NOTE_KEY, binding.edTitle.text.toString())
+            putExtra(NoteFragment.NEW_NOTE_KEY, createNewNote())
         }
         setResult(RESULT_OK, i)
         finish()
+    }
+
+    private fun createNewNote(): NoteItem {
+        return NoteItem(
+            null,
+            binding.edTitle.text.toString(),
+            binding.edDescription.text.toString(),
+            getCurrentTime(),
+            ""
+            )
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getCurrentTime(): String {
+        val formatter = SimpleDateFormat("hh:mm - yy/MM/dd", Locale.getDefault())
+        return formatter.format(Calendar.getInstance().time)
     }
 
     private fun actionBarSettings() {
