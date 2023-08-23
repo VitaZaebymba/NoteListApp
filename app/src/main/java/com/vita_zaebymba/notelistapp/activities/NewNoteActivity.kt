@@ -57,7 +57,7 @@ class NewNoteActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
     private fun getCurrentTime(): String {
-        val formatter = SimpleDateFormat("hh:mm - yy/MM/dd", Locale.getDefault())
+        val formatter = SimpleDateFormat("HH:mm - dd/MM/yy", Locale.getDefault())
         return formatter.format(Calendar.getInstance().time)
     }
 
