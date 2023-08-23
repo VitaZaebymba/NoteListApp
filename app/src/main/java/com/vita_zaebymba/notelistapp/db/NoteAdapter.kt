@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.vita_zaebymba.notelistapp.R
-import com.vita_zaebymba.notelistapp.databinding.NoteListItemBinding
+import com.example.myapplication.R
+import com.example.myapplication.databinding.NoteListItemBinding
 import com.vita_zaebymba.notelistapp.entities.NoteItem
 
 class NoteAdapter: ListAdapter<NoteItem, NoteAdapter.ItemHolder>(ItemComparator()) {

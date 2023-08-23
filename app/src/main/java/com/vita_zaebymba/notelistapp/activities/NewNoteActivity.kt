@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.vita_zaebymba.notelistapp.R
-import com.vita_zaebymba.notelistapp.databinding.ActivityNewNoteBinding
+import com.example.myapplication.R
+import com.example.myapplication.databinding.ActivityNewNoteBinding
 import com.vita_zaebymba.notelistapp.entities.NoteItem
 import com.vita_zaebymba.notelistapp.fragments.NoteFragment
 import java.text.SimpleDateFormat

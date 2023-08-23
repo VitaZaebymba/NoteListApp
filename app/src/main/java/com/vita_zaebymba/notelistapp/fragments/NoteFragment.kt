@@ -11,9 +11,9 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.databinding.FragmentNoteBinding
 import com.vita_zaebymba.notelistapp.activities.MainApp
 import com.vita_zaebymba.notelistapp.activities.NewNoteActivity
-import com.vita_zaebymba.notelistapp.databinding.FragmentNoteBinding
 import com.vita_zaebymba.notelistapp.db.MainViewModel
 import com.vita_zaebymba.notelistapp.db.NoteAdapter
 import com.vita_zaebymba.notelistapp.entities.NoteItem

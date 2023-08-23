@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.vita_zaebymba.notelistapp.R
-import com.vita_zaebymba.notelistapp.databinding.ActivityMainBinding
-import com.vita_zaebymba.notelistapp.databinding.FragmentNoteBinding
+import com.example.myapplication.R
+import com.example.myapplication.databinding.ActivityMainBinding
+
 import com.vita_zaebymba.notelistapp.fragments.FragmentManager
 import com.vita_zaebymba.notelistapp.fragments.NoteFragment
 

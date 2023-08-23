@@ -1,7 +1,8 @@
 package com.vita_zaebymba.notelistapp.fragments
 
 import androidx.appcompat.app.AppCompatActivity
-import com.vita_zaebymba.notelistapp.R
+import com.example.myapplication.R
+
 
 object FragmentManager {
     var currentFragment: BaseFragment?= null // используется для отслеживания текущего активного фрагмента
