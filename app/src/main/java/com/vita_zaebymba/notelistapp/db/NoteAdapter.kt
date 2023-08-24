@@ -10,24 +10,27 @@ import com.example.myapplication.R
 import com.example.myapplication.databinding.NoteListItemBinding
 import com.vita_zaebymba.notelistapp.entities.NoteItem
 
-class NoteAdapter: ListAdapter<NoteItem, NoteAdapter.ItemHolder>(ItemComparator()) {
+class NoteAdapter(private val listener: Listener): ListAdapter<NoteItem, NoteAdapter.ItemHolder>(ItemComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         return ItemHolder.create(parent) // создание заметки
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        holder.setData(getItem(position)) // заполнение заметки
+        holder.setData(getItem(position), listener) // заполнение заметки
     }
 
 
     class ItemHolder(view: View): RecyclerView.ViewHolder(view) {
         private val binding = NoteListItemBinding.bind(view)
 
-        fun setData(note: NoteItem) = with(binding) {
+        fun setData(note: NoteItem, listener: Listener) = with(binding) {
             tvTitle.text = note.title
             tvDescription.text = note.content
             tvTime.text = note.time
+            imDelete.setOnClickListener {
+                listener.deleteItem(note.id!!)
+            }
         }
         companion object {
             fun create(parent: ViewGroup): ItemHolder {
@@ -45,4 +48,9 @@ class NoteAdapter: ListAdapter<NoteItem, NoteAdapter.ItemHolder>(ItemComparator(
             return oldItem == newItem
         }
     }
+
+    interface Listener {
+        fun deleteItem(id: Int)
+    }
+
 }
